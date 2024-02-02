@@ -18,8 +18,9 @@ const geh = require("../api/errorHandler");
 const songRouter = require("../api/song/router");
 
 // Use Third party middlewares
-// app.use(cors("maraki-backend.vercel.app"));
-app.use(cors())
+app.use(cors("songs-backend-phi.vercel.app"));
+
+// app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -28,7 +29,6 @@ app.get('/', (req, res) => {
   res.send('Welcome to Test Songs API')
 })
 
-// Use routers
 app.use("/api/song", songRouter);
 
 // Handle URL which don't exist
