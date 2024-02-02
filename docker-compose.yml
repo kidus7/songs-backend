@@ -1,14 +1,9 @@
 version: '3.8'
 services:
-    server:
+  serve:
     build:
-      dockerfile: ./Dockerfile
       context: .
-    container_name: 'server'
+      dockerfile: ./Dockerfile
+    container_name: serve
     ports:
       - 3000:4000
-    mongo: 
-        container_name: mongo
-        image: mongo
-        ports: 
-            - '27017:27017'
