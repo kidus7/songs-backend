@@ -18,7 +18,8 @@ const geh = require("../api/errorHandler");
 const songRouter = require("../api/song/router");
 
 // Use Third party middlewares
-app.use(cors("songs-backend-phi.vercel.app"));
+// app.use(cors("songs-backend-phi.vercel.app"));
+app.use(cors("songs-backend-api.onrender.com"));
 
 // app.use(cors())
 app.use(express.json());
